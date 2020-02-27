@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h1>Task management</h1>
+    <h1>Tasks management</h1>
     <input type="text" [(ngModel)]="description" minlength="3" #task="ngModel" required class="form-control">
 
     <div *ngIf="task.errors?.minlength">
@@ -15,7 +15,7 @@
     <button (click)="addTask()" [disabled]="!task.valid" class="btn">add</button>
 
     <div *ngIf="tasksList.length" id="warpRadio">
-        <h5>Task List</h5>
+        <h5>Tasks list</h5>
 
         <div class="radio">
             <label><input type="radio" name="optradio" (change)="changeToEntry()" checked>In order of entry</label>
@@ -28,9 +28,8 @@
 
 
 
-
-
     <ul *ngFor="let t of tasksList; let i=index" class="list-group">
-        <li class="list-group-item" [ngClass]="{'red': t.urgency=='High','green':t.urgency=='Normal'}">{{t.description}} <span (click)="deleteTask(i)" class="badge">{{i+1}}</span></li>
+        <li class="list-group-item" [ngClass]="{'red': t.urgency=='High','green':t.urgency=='Normal'}">{{t.description}}
+            <span (click)="deleteTask(i)" class="badge">{{i+1}}</span></li>
     </ul>
 </div>
