@@ -1,0 +1,27 @@
+.wrap{
+    width:30%;
+    margin: auto;
+    margin-top: 2%;
+    
+}
+input{
+    display: inline-block;
+}
+button,#warpRadio,input{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+span{
+    float: right;
+    
+}
+select{
+    width: 50%;
+}
+.red{
+    color: red;
+    
+}
+.green{
+    color:green;
+}
